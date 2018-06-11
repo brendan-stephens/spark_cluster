@@ -16,7 +16,7 @@
 
 # Usage #
 
-* Clone this repository first.
+* Clone this repository.
 
 * [Download a pre-built Spark package](https://spark.apache.org/downloads.html) and place it into this directory; symlink as "spark.tgz".
 
