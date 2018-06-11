@@ -1,5 +1,6 @@
-# spark_cluster_vagrant #
-Vagrant template to provision a Spark cluster with lean defaults. 
+# spark_cluster #
+
+**Vagrant template to provision a Spark cluster with lean defaults.**
 
 # Details #
 
