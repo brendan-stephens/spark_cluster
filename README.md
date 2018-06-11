@@ -12,7 +12,9 @@
 # Prerequsites #
 
 * [Vagrant](https://www.vagrantup.com/downloads.html)
+* [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 * Vagrant Hosts Plugin: `vagrant plugin install vagrant-hosts`
+  * This allows us to provision the hosts files for all the instances.
 
 # Usage #
 
