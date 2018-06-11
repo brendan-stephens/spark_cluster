@@ -34,10 +34,12 @@ Vagrant template to provision a Spark cluster with lean defaults.
 
 * The Spark WebUI should be available at `http://192.168.99.200:8080`.
 
-* To run `SparkPi` on the cluster, run the following commands:
+* Setup Environment Vairables
+  * `GSC_JAR=$(ls /vagrant/greenplum-spark_2.11-*.jar)`
+  * `POSTGRES_JAR=$(ls /vagrant/postgresql-*.jar)`
 
-    vagrant ssh hn0
-    spark-submit --class org.apache.spark.examples.SparkPi ~/spark/examples/jars/spark-examples_2.11-2.2.1.jar 1000
+* Run SCALA 
+  * `spark-shell --jars "${GSC_JAR},${POSTGRES_JAR}" --driver-class-path ${POSTGRES_JAR}`
 
 
 # Cleanup
