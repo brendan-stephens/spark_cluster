@@ -6,7 +6,7 @@
 
 - See `Vagrantfile` for details and to make changes.
 - Spark running as a standalone cluster. Tested with Spark 2.1.x (check Spark Connector Compatability).
-- One head node Centos 7.4 machine and `N` worker (slave) machines.
+- One head node Centos 7.4 machine and `N` worker (slave) machines [0-9].
 - Spark running in standalone cluster mode.
 
 # Prerequsites #
