@@ -9,7 +9,12 @@
 - One head node Centos 7.4 machine and `N` worker (slave) machines.
 - Spark running in standalone cluster mode.
 
-# Usage 
+# Prerequsites #
+
+* [Vagrant](https://www.vagrantup.com/downloads.html)
+* Vagrant Hosts Plugin: `vagrant plugin install vagrant-hosts`
+
+# Usage #
 
 * Clone this repository first.
 
@@ -29,7 +34,7 @@
 
 * When you're ready, just run `vagrant up` in the directory the `Vagrantfile` is in. 
 
-# Testing
+# Testing #
 
 * SSH in using `vagrant ssh hn0` or `vagrant ssh wn0`.
 
@@ -43,7 +48,7 @@
   * `spark-shell --jars "${GSC_JAR},${POSTGRES_JAR}" --driver-class-path ${POSTGRES_JAR}`
 
 
-# Cleanup
+# Cleanup #
 
 * Shut down the cluster with `vagrant halt` and delete it with `vagrant destroy`. 
 
