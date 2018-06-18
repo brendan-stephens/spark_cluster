@@ -27,6 +27,8 @@ Vagrant.configure("2") do |config|
       tar xf /vagrant/spark.tgz -C /home/vagrant/spark --strip 1
       echo "export SPARK_HOME=/home/vagrant/spark" >> /home/vagrant/.bashrc
       echo "export PATH=$PATH:/home/vagrant/spark/bin" >> /home/vagrant/.bashrc
+      echo "export GSC_JAR=$(ls /vagrant/greenplum-spark_2.11-*.jar)" >> /home/vagrant/.bashrc
+      # echo "export POSTGRES_JAR=$(ls /vagrant/postgresql-*.jar)" >> /home/vagrant/.bashrc
       echo "spark.master spark://192.168.99.200:7077" >> /home/vagrant/spark/conf/spark-defaults.conf
       echo "SPARK_LOCAL_IP=192.168.99.200" >> /home/vagrant/spark/conf/spark-env.sh
       echo "SPARK_MASTER_HOST=192.168.99.200" >> /home/vagrant/spark/conf/spark-env.sh
