@@ -28,9 +28,10 @@
 
 * Open up `Vagrantfile` in a text editor.
 
-* Change the `N_WORKERS` to the number of desired worker hosts [0-9].
+* Optional: Change the `N_WORKERS` to the number of desired worker hosts [0-9].
 
-* Vagrant will spin up one "head node" and `N` worker nodes in a Spark standalone cluster.
+* By Default: Vagrant will spin up one "head node" and `N` worker nodes in a Spark standalone cluster.
+  * You can start a standalone instance using: vagrant up hn0
 
 * Feel free to make other changes, e.g. RAM and CPU for each of the machines.
 
