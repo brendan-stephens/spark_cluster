@@ -48,8 +48,14 @@
   * `POSTGRES_JAR=$(ls /vagrant/postgresql-*.jar)`
 
 * Run SCALA 
-  * `spark-shell --jars "${GSC_JAR},${POSTGRES_JAR}" --driver-class-path ${POSTGRES_JAR}`
 
+  Spark Connector 1.2: Read from Greenplum with Spark Connector / Write to Greenplum with JDBC -- 
+
+  * `spark-shell --jars "${GSC_JAR},${POSTGRES_JAR}" --driver-class-path ${POSTGRES_JAR}`
+  
+  Spark Connector 1.3: Read and Write to Greenplum with Spark Connector -- 
+
+  * `spark-shell --jars "${GSC_JAR}"`
 
 # Cleanup #
 
