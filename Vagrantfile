@@ -28,6 +28,10 @@ Vagrant.configure("2") do |config|
       tar xf /vagrant/spark.tgz -C /home/vagrant/spark --strip 1
     
       cat <<'      EOF'  >> /home/vagrant/.bashrc
+      # JAVA
+      export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+      export PATH=$PATH:$JAVA_HOME/bin
+      # SPARK
       export SPARK_HOME=/home/vagrant/spark
       export PATH=$PATH:/home/vagrant/spark/bin
       export POSTGRES_JAR=$(ls /vagrant/postgresql-*.jar)
