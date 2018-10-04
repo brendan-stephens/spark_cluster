@@ -40,7 +40,14 @@
 
 * SSH in using `vagrant ssh hn0` or `vagrant ssh wn0`.
 
+* Spark is running as `root`.
+
 * The Spark WebUI should be available at `http://192.168.99.200:8080`.
+
+```
+sudo jps -ml
+PID org.apache.spark.deploy.master.Master --host 192.168.99.200 --port 7077 --webui-port 8080 -h 192.168.99.200
+```
 
 * Setup Environment Vairables
   * `GSC_JAR=$(ls /vagrant/greenplum-spark_2.11-*.jar)`
@@ -48,13 +55,13 @@
 
 * Run SCALA 
 
-  Spark Connector 1.2: Read from Greenplum with Spark Connector / Write to Greenplum with JDBC -- 
+  Spark Connector 1.2: Read from Greenplum with Spark Connector / Write to Greenplum with JDBC: 
 
-  * `spark-shell --jars "${GSC_JAR},${POSTGRES_JAR}" --driver-class-path ${POSTGRES_JAR}`
+  * `sudo spark-shell --jars "${GSC_JAR},${POSTGRES_JAR}" --driver-class-path ${POSTGRES_JAR}`
   
-  Spark Connector 1.3: Read and Write to Greenplum with Spark Connector -- 
+  Spark Connector 1.3+: Read and Write to Greenplum with Spark Connector:
 
-  * `spark-shell --jars "${GSC_JAR}"`
+  * `sudo spark-shell --jars "${GSC_JAR}"`
 
 # Cleanup #
 
