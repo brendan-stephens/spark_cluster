@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     end
       
     node.vm.provision "shell", inline: <<-SHELL     
-      # apt-get install -y python-dev ntp default-jdk
+      # apt-get install -y python-dev ntp default-jdk java-devel
       yum install -y python-devel ntp java lsof
     
       mkdir /home/vagrant/spark
@@ -66,7 +66,7 @@ Vagrant.configure("2") do |config|
       end
         
       node.vm.provision "shell", inline: <<-SHELL
-        #apt-get install -y python-dev ntp avahi-daemon default-jdk
+        #apt-get install -y python-dev ntp avahi-daemon default-jdk java-devel
         yum install -y python-devel ntp java lsof
         mkdir /home/vagrant/spark
         tar xf /vagrant/spark.tgz -C /home/vagrant/spark --strip 1
